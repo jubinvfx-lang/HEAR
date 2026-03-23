@@ -1,0 +1,49 @@
+# JubinFX Live - Product Requirements Document (PRD)
+
+## 1. Overview
+JubinFX Live is a high-performance, full-stack livestreaming and social media mobile application. It combines the short-form video engagement of TikTok, the live-streaming capabilities of Instagram/YouTube, and a robust monetization system for creators and advertisers.
+
+## 2. Core Features & User Flows
+
+### 2.1 User Authentication & Profiles
+*   **Flow:** Onboarding -> Login (Email/Phone/Google) -> Profile Setup.
+*   **Requirements:** Firebase Auth integration, username availability check, bio, and profile picture upload to AWS S3.
+
+### 2.2 Short-Form Video Feed (Reels/TikTok Style)
+*   **Flow:** Main Home Tab -> Vertical Swipe.
+*   **Features:** Auto-play (Video Player), Like/Comment/Share overlay, Follow button.
+*   **Ad Integration:** Interstitial ads appearing every 5-7 scrolls.
+
+### 2.3 Livestreaming (Live Tab)
+*   **Flow:** Tap 'Go Live' -> Title/Category -> Start Stream.
+*   **Viewer Experience:** Real-time chat (Socket.io), Virtual Gift sending (Coin system), Viewer count.
+*   **Monetization:** Streamers receive coins which convert to real-world currency.
+
+### 2.4 Advertisement System (AdMob/Meta)
+*   **Banner Ads:** Bottom of the Search/Discover page.
+*   **Rewarded Ads:** Users watch to earn small amounts of 'Coins'.
+*   **Interstitial Ads:** Between video transitions.
+
+### 2.5 Monetization & Creator Economy
+*   **Coin Store:** In-app purchases for coin packs.
+*   **Earnings Dashboard:** Breakdown of gift revenue vs. ad revenue share.
+
+### 2.6 Admin Panel (Web)
+*   **Management:** User banning, content moderation, ad campaign scheduling, and revenue analytics.
+
+## 3. Technical Architecture
+
+### 3.1 Frontend (Flutter)
+*   **State Management:** Riverpod or Bloc for scalable state.
+*   **Video:** `video_player` or `chewie` with caching.
+*   **Streaming:** WebRTC for low-latency live video.
+
+### 3.2 Backend (Node.js + Express)
+*   **API:** RESTful endpoints for CRUD, Socket.io for real-time events.
+*   **Database:** MongoDB for flexible user and content schemas.
+*   **Storage:** AWS S3 / CloudFront for global CDN delivery.
+
+## 4. UI/UX Strategy
+*   **Theme:** Dark Mode (Primary), sleek gradients, high-contrast typography.
+*   **Navigation:** Persistent Bottom Bar (Home, Search, Live, Upload, Profile).
+*   **Animations:** Smooth hero transitions and micro-interactions for 'Likes'.

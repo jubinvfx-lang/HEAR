@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#00eefc",
+                        "primary-fixed": "#d878ff",
+                        "on-tertiary-fixed-variant": "#711517",
+                        "secondary-dim": "#00deec",
+                        "on-primary-fixed-variant": "#4b0068",
+                        "secondary": "#00eefc",
+                        "on-primary-fixed": "#000000",
+                        "outline-variant": "#494847",
+                        "on-secondary-container": "#e3fdff",
+                        "on-secondary": "#005359",
+                        "surface-tint": "#df8eff",
+                        "error-container": "#a70138",
+                        "tertiary-fixed": "#ff928b",
+                        "on-secondary-fixed-variant": "#005e64",
+                        "on-background": "#ffffff",
+                        "surface-container-high": "#201f1f",
+                        "inverse-on-surface": "#565554",
+                        "background": "#0e0e0e",
+                        "surface-variant": "#262626",
+                        "surface": "#0e0e0e",
+                        "on-surface": "#ffffff",
+                        "surface-container-highest": "#262626",
+                        "on-tertiary": "#62080d",
+                        "tertiary-dim": "#f57871",
+                        "primary-fixed-dim": "#d061ff",
+                        "on-tertiary-fixed": "#3a0003",
+                        "tertiary-container": "#f97a74",
+                        "secondary-fixed-dim": "#00deec",
+                        "tertiary-fixed-dim": "#fc7d76",
+                        "on-error": "#490013",
+                        "surface-container-low": "#131313",
+                        "primary-container": "#d878ff",
+                        "primary": "#df8eff",
+                        "surface-container-lowest": "#000000",
+                        "outline": "#777575",
+                        "error": "#ff6e84",
+                        "on-primary-container": "#3d0055",
+                        "on-surface-variant": "#adaaaa",
+                        "surface-dim": "#0e0e0e",
+                        "primary-dim": "#bb00fc",
+                        "on-tertiary-container": "#4e0006",
+                        "inverse-surface": "#fcf8f8",
+                        "error-dim": "#d73357",
+                        "tertiary": "#ff8d86",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container": "#1a1919",
+                        "on-primary": "#4f006d",
+                        "on-error-container": "#ffb2b9",
+                        "on-secondary-fixed": "#003f43",
+                        "secondary-container": "#006970",
+                        "inverse-primary": "#9a00d0"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body overflow-hidden">
+<!-- Top Navigation Shell (TopAppBar) -->
+<header class="bg-[#0E0E0E]/80 backdrop-blur-xl docked full-width top-0 z-50 flex justify-between items-center px-6 h-20 w-full shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="User profile avatar smiling headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACb4lSc5IbjHMbniAks8qDfFd8QaLpCIWVUHrrOqIXA5PSLxwgsE9b2uiCEC_1iE1wPe9OvD7WbfzLUVG_exew9IM92tvEtr6aPbSp0CIi6xKcqiRMrUFxQlt9QmP44muB7W__AccuOB3_3dx3vnaNcXDoYAyh-ziFUg5QYPHSXH6tUkHT3NjJGM_NBRXIzs7xfUY7jzmdBZy_Zye6zSCXevm7ysWBhSYG5LO8tykvuyZ8x9vaLr3_8UbweIguTmFnCIQYrfZboJc"/>
+</div>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-2xl font-black bg-gradient-to-br from-[#DF8EFF] to-[#D878FF] bg-clip-text text-transparent">JubinFX Live</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#ADAAAA] hover:bg-[#262626] transition-colors p-2 rounded-full active:scale-90 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<!-- Main TikTok-Style Video Canvas -->
+<main class="relative h-screen w-full bg-black overflow-hidden pt-20">
+<!-- Fullscreen Video Placeholder -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-80" data-alt="Vibrant concert stage with purple and cyan neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3pUk5LEYG9bURM-ui1JdVS5kAQ2VgxuJjsOx-2nQyf15DE03EqZnZViFWY7-iXEp9dUhQRhN4Z-fGIeRqY7SF8Jjg1D6LSd5KmPxZsxiSVHw6m89SHW1LJXnj8gIIDMWiRRvDvSlFqmx9j8cmoZxpOMSWZKSZfEk36HxnURc8nSgCkTMSq4s9lpF-Os5emLcLddydJXL5IK4Qm3RmSIcq0gLxb0jVZoQIHlqA24KUBMklJWFo0WdA3I_KvwYWM8q9JxECLXgOuEM"/>
+<!-- Tonal Overlay for Readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+</div>
+<!-- Top-Left Live Indicator -->
+<div class="absolute top-24 left-6 z-20">
+<div class="flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+<div class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#FF8D86] animate-pulse"></div>
+<span class="text-tertiary font-headline font-bold text-xs tracking-widest uppercase">Live</span>
+<span class="text-white/80 text-[10px] font-bold border-l border-white/20 pl-2">2.4K</span>
+</div>
+</div>
+<!-- Right Side Overlay Actions -->
+<div class="absolute right-4 bottom-32 z-20 flex flex-col items-center gap-6">
+<!-- Like -->
+<div class="flex flex-col items-center gap-1 group cursor-pointer active:scale-110 transition-transform">
+<div class="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10 shadow-[0_0_20px_rgba(223,142,255,0.2)]">
+<span class="material-symbols-outlined text-primary text-3xl filled-icon">favorite</span>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-on-surface">124.5K</span>
+</div>
+<!-- Comment -->
+<div class="flex flex-col items-center gap-1 group cursor-pointer active:scale-110 transition-transform">
+<div class="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10">
+<span class="material-symbols-outlined text-white text-3xl">chat_bubble</span>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-on-surface">1.2K</span>
+</div>
+<!-- Share -->
+<div class="flex flex-col items-center gap-1 group cursor-pointer active:scale-110 transition-transform">
+<div class="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10">
+<span class="material-symbols-outlined text-white text-3xl">reply</span>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-on-surface">Share</span>
+</div>
+<!-- Music Record -->
+<div class="mt-4 p-1 rounded-full border border-white/20 bg-black animate-spin-slow">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Circular vinyl record cover art with abstract neon colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0fRkZy5KYIG6TxfLQpI12_nSPl6WmVK6jjcLVIsIrKgvQJkgdjYN4LaP8k8UKppmNt6ffw1QySYXxr-GuhFd4RsrgWzfTb8z8iNjdCgzUws-T4-GeX7zMJu8NW-HosyLf2AzaaPRnsGU2KS7DeU5mvHvleZHnZdhfLQn4oeG5_SNTwi267ug6g42IIBlyMSf0Hf3dUNz0Hgkj5zaMqAhH5rEutzsArxA_-42E7D1rdeQlmTq_Zx0KaKZxIHEWas2Krs_lNHXkjX4"/>
+</div>
+</div>
+</div>
+<!-- Left Side Creator Info & Caption -->
+<div class="absolute left-6 bottom-32 z-20 max-w-[70%]">
+<div class="flex items-center gap-3 mb-4">
+<div class="relative">
+<div class="w-14 h-14 rounded-full border-2 border-primary-fixed p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Portrait of a male creator with creative lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqkemC0MVPk-VGlodksszurGbGjXNwlJKtIqsAG8eOO9vUrI8Y9CkaCVZ7AN7lkqlBW8sUKCwMksEoZL6a07N6RF2NPpmC3vkgrtuNzQ0T57-LcGJuKgLT2BhiAfIV1GsvgLPpwiSdUly8DXpYCTHgAkgxXwNa8kaZrDCKdTCnpaBIGrI2fW3SLtH-RVhuYs9d2Odnz_yI_lqBNjZiq-4WloBntUrD3ngUsAiSQ6tB9oips42XPK96ZTFTG-XL7eIoLCdyQBYulBI"/>
+</div>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-primary-fixed text-on-primary-fixed w-5 h-5 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[14px] font-bold">add</span>
+</div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline font-bold text-lg text-white">@jubin_fx_live</h3>
+<p class="text-secondary text-xs font-bold tracking-wide">Electronic Pulse Night</p>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-sm leading-relaxed text-on-surface font-medium drop-shadow-md">
+                    Testing the new neon rig for tonight's set. The bass response in this room is incredible! 🎹⚡️
+                </p>
+<div class="flex items-center gap-3 text-secondary-fixed text-xs font-bold">
+<span>#NeoRave</span>
+<span>#JubinFX</span>
+<span>#LiveMusic</span>
+</div>
+</div>
+</div>
+<!-- Ad Interstitial Teaser (Bottom) -->
+<div class="absolute bottom-24 left-4 right-4 z-30">
+<div class="bg-surface-container-low/60 backdrop-blur-2xl p-4 rounded-xl border border-white/5 flex items-center justify-between group cursor-pointer hover:bg-surface-container-low/80 transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/10 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Bright red sneaker in creative studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv-hWtZfQQWdKSOr9DQMqZzIjPMsbSnjnK-24VYeNyaCx8sst7nYqL7vLy96jm57cXxalRisONI7QYGZjdfCYsGj6KlvCem1HKtwmbR-wsgx_nnRHjFEcK7OYw1fPrImkOngiH2a4DP6INJyttzcnD74z0XlL7OeMeoC2qk2sSq0udo5Cya14pb5NeqN5xW28LM2Jni8TonpjF3OrCmqNy68lRIEX1Db95wyKQ1qEMAZqGmZ3q2DVLuTqu61_z60vN3mpJo4HXAr4"/>
+</div>
+<div>
+<span class="text-[10px] uppercase tracking-widest text-secondary-fixed font-bold mb-1 block">Sponsored</span>
+<h4 class="text-sm font-bold text-white leading-tight">Elite Speed Runners - 20% OFF</h4>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full font-bold text-xs active:scale-95 transition-transform">
+                    Shop Now
+                </button>
+</div>
+</div>
+</main>
+<!-- Navigation Shell (BottomNavBar) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#0E0E0E]/90 backdrop-blur-2xl rounded-t-[3rem] z-50 shadow-[0_-10px_30px_rgba(223,142,255,0.05)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-[#ADAAAA] p-3 hover:text-white transition-all active:scale-110 duration-300" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</a>
+<!-- Search -->
+<a class="flex flex-col items-center justify-center text-[#ADAAAA] p-3 hover:text-white transition-all active:scale-110 duration-300" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest">Search</span>
+</a>
+<!-- Live (Active) -->
+<a class="flex flex-col items-center justify-center text-[#DF8EFF] bg-[#262626] rounded-full p-3 shadow-[0_0_15px_rgba(223,142,255,0.3)] transition-all active:scale-110 duration-300" href="#">
+<span class="material-symbols-outlined mb-1 filled-icon">sensors</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest">Live</span>
+</a>
+<!-- Alerts -->
+<a class="flex flex-col items-center justify-center text-[#ADAAAA] p-3 hover:text-white transition-all active:scale-110 duration-300" href="#">
+<span class="material-symbols-outlined mb-1">notifications</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest">Alerts</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#ADAAAA] p-3 hover:text-white transition-all active:scale-110 duration-300" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>
